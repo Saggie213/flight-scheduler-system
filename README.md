@@ -59,42 +59,44 @@ Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https:
 
 ## 🎨 Available Features & Components
 
-This scaffold includes a comprehensive set of modern web development tools:
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+---
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+## ⚡ How It Helps
+- Predicts **which hours are most prone to delays**.  
+- Recommends **schedule shifts** to balance traffic.  
+- Provides **easy insights via plain-English queries**.  
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+---
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
+## 💡 What’s Unique
+- **Explains delays** instead of being a black box.  
+- **Balances schedules** instead of just shifting flights.  
+- **Conversational interface** anyone can use.  
+- **Scalable** to other airports and real-time data.  
 
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
+---
 
-## 🤝 Get Started with Z.ai
+## 📈 Example Insights
+- 🕕 Early morning flights (06:00–07:00) had the **best on-time performance**.  
+- 🕒 Afternoon flights (15:00–16:00) were the **most congested nationally**.  
+- 🌧️ Monsoon weather caused delays of **up to 1 hour** in a single day.  
 
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
+---
+
+## 📖 References
+- Cirium (2024). *Domestic aviation peak-hour analysis*.  
+- The Week (2025). *Mumbai’s single-runway crisis and NMIA*.  
+- Flightradar24 (2025). *CSMIA disruption report during August monsoons*.  
+
+---
+
+## 🚦 Getting Started
+### 1. Clone the repo
+```bash
+git clone https://github.com/Saggie213/flight-scheduling-ai.git
+cd flight-scheduling-ai
+
 3. **Start building** with intelligent code generation and assistance
 4. **Deploy with confidence** using the production-ready setup
 
