@@ -1,58 +1,33 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# ✈️ AI-Powered Flight Scheduling at CSMIA
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+## 📌 Overview
+Mumbai’s Chhatrapati Shivaji Maharaj International Airport (CSMIA) is the **world’s busiest single-runway airport**, handling over 55 million passengers annually.  
+This project uses **AI-driven analysis and prediction** to identify congestion patterns, model delays, and suggest smarter scheduling strategies that can help reduce bottlenecks.  
 
-## ✨ Technology Stack
+The system also includes a **natural-language interface** so users can query results in plain English.
 
-This scaffold provides a robust foundation built with:
+---
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+## 🚀 Features
+- 📊 **Flight Data Analysis** – cleaned and processed 1 week of operations from CSMIA.  
+- ⏱️ **Delay Prediction Model** – interpretable regression model for departure delays.  
+- 🔄 **Schedule Tuning** – suggests alternative departure times to minimize congestion.  
+- 💬 **Natural-Language Queries** – simple Q&A for delay trends and critical flights.  
+- 📂 **Open-Source & Modular** – easy to extend with weather or ATC feeds.  
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+---
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+## 🛠️ Tech Stack
+- **Python**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn  
+- **Frontend**: React, Tailwind CSS, shadcn/ui  
+- **Backend**: Next.js, TypeScript, Express  
+- **Database**: SQLite + Prisma  
+- **NLP**: Rule-based interface for natural queries  
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
+---
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+## 📂 Project Structure
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
-
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
-
-## 🎯 Why This Scaffold?
-
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
 
 ## 🚀 Quick Start
 
@@ -70,29 +45,16 @@ npm run build
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+Open [http://FlightWise-Scheduler](https://9000-firebase-studio-1756045307838.cluster-yylgzpipxrar4v4a72liastuqy.cloudworkstations.dev/) to see your application running.
 
-## 🤖 Powered by Z.ai
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
-
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
 
 Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
 
 ## 📁 Project Structure
 
 ```
-src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+
 ```
 
 ## 🎨 Available Features & Components
