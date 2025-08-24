@@ -54,6 +54,29 @@ Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https:
 ## 📁 Project Structure
 
 ```
+flight-scheduler-system/
+├── db/
+├── examples/
+│   └── websocket/
+├── prisma/
+├── public/
+├── scripts/
+├── src/
+├── .dockerignore
+├── .gitignore
+├── README.md
+├── analysis.py
+├── components.json
+├── eslint.config.mjs
+├── flight_data_cleaned.csv
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── server.ts
+├── tailwind.config.ts
+└── tsconfig.json
+
 
 ```
 
