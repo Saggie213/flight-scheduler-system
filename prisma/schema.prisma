@@ -1,0 +1,194 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Seed script configuration
+seed {
+  executor = "tsx"
+  script = "prisma/seed.ts"
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  title     String
+  content   String?
+  published Boolean  @default(false)
+  authorId  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// Flight Scheduling Analytics Models
+
+model Airport {
+  id            String   @id @default(cuid())
+  code          String   @unique
+  name          String
+  city          String
+  country       String
+  timezone      String
+  coordinates   String   // JSON string with lat/lng
+  terminals     Int
+  runways       Int
+  capacity      Int
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  flights       Flight[]
+  analytics     Analytics[]
+  optimizations Optimization[]
+}
+
+model Flight {
+  id              String   @id @default(cuid())
+  flightNumber   String
+  airline         String
+  origin          String
+  destination     String
+  scheduledDeparture DateTime
+  scheduledArrival   DateTime
+  actualDeparture   DateTime?
+  actualArrival     DateTime?
+  status          FlightStatus
+  delayMinutes    Int?
+  gate            String?
+  terminal        String?
+  aircraft        String?
+  altitude        Int?
+  speed           Int?
+  heading         Int?
+  airportCode     String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  airport         Airport  @relation(fields: [airportCode], references: [code])
+  delayAnalyses   DelayAnalysis[]
+}
+
+model Analytics {
+  id            String   @id @default(cuid())
+  airportCode   String
+  type          AnalyticsType
+  data          String   // JSON string with analytics data
+  confidence    Float
+  timestamp     DateTime @default(now())
+  createdAt     DateTime @default(now())
+  
+  airport       Airport  @relation(fields: [airportCode], references: [code])
+}
+
+model Optimization {
+  id            String   @id @default(cuid())
+  airportCode   String
+  type          OptimizationType
+  title         String
+  description   String
+  priority      Priority
+  impact        String
+  implementation String
+  status        OptimizationStatus
+  expectedImprovement String // JSON string
+  riskAssessment String   // JSON string
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  airport       Airport  @relation(fields: [airportCode], references: [code])
+}
+
+model DelayAnalysis {
+  id            String   @id @default(cuid())
+  flightId      String
+  cause         String
+  severity      String
+  propagationRisk Float
+  affectedFlights String // JSON string with flight IDs
+  mitigation    String
+  timestamp     DateTime @default(now())
+  
+  flight        Flight   @relation(fields: [flightId], references: [id])
+}
+
+model NLPQuery {
+  id            String   @id @default(cuid())
+  query         String
+  intent        String
+  entities      String   // JSON string
+  response      String   // JSON string
+  airportCode   String?
+  confidence    Float
+  timestamp     DateTime @default(now())
+}
+
+model PredictiveModel {
+  id            String   @id @default(cuid())
+  name          String
+  type          String
+  parameters    String   // JSON string
+  accuracy      Float
+  lastTrained   DateTime
+  isActive      Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+// Enums
+
+enum FlightStatus {
+  SCHEDULED
+  DELAYED
+  DEPARTED
+  ARRIVED
+  CANCELLED
+}
+
+enum AnalyticsType {
+  PEAK_HOURS
+  DELAYS
+  CAPACITY
+  PATTERNS
+  DELAY_PROPAGATION
+  CAPACITY_FORECAST
+  DISRUPTION_IMPACT
+  OPTIMIZATION_POTENTIAL
+}
+
+enum OptimizationType {
+  SCHEDULING
+  DELAY_MITIGATION
+  CAPACITY
+  ROUTING
+  GATE_ASSIGNMENT
+  RUNWAY_OPTIMIZATION
+}
+
+enum Priority {
+  HIGH
+  MEDIUM
+  LOW
+}
+
+enum OptimizationStatus {
+  PENDING
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
