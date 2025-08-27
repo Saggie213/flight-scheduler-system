@@ -45,7 +45,7 @@ npm run build
 npm start
 ```
 
-Open [http://FlightWise-Scheduler](https://9000-firebase-studio-1756045307838.cluster-yylgzpipxrar4v4a72liastuqy.cloudworkstations.dev/) to see your application running.
+Open [http://FlightWise-Scheduler](https://studio--flightwise-scheduler-tkp5o.us-central1.hosted.app) to see your application running.
 
 
 
